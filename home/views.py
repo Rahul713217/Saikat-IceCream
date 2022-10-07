@@ -7,26 +7,15 @@ from django.contrib import messages
 
 # Create your views here.
 def index(request):
-    
-    # context={
-    #     'variable1':'Code With Harry',
-    #     'variable2':'I Learn Django First Time'
-    #     'variable3':'Django is awsome'
-    # }
-    # messages.success(request,"This is a test message")
-
     return render(request,'index.html')
-    # return HttpResponse('This is Homepage')
 
 
 def about(request):
     return render(request,'about.html')
-    # return HttpResponse('This is Aboutpage')
 
 
 def services(request):
     return render(request,'services.html')
-    # return HttpResponse('Available Services')
 
 def contact(request):
     if request.method == 'POST':
@@ -41,5 +30,4 @@ def contact(request):
         messages.success(request, 'Your message is sent successfully!')
 
     return render(request,'contact.html')
-    # return HttpResponse('Contact Details')
 
