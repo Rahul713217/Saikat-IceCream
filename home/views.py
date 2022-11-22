@@ -22,7 +22,7 @@ def contact(request):
         name = request.POST.get('name')
         phone = request.POST.get('phone')
         email = request.POST.get('email')
-        # password = request.POST.get('password')
+        password = request.POST.get('password')
         desc = request.POST.get('desc')
         file = request.POST.get('file')
         contact = Contact(name=name, phone=phone, email=email, password=password, desc=desc, file=file, date=datetime.today())
